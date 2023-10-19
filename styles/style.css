@@ -1,0 +1,157 @@
+
+
+@font-face {
+  font-family: code;
+  src: url('fonts/PressStart2P-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: normal;
+  src: url('fonts/Solway-Medium.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: barcode;
+  src: url('fonts/LibreBarcode.ttf');
+  font-display: swap;
+}
+
+
+html {
+   background-color: #1a1a1a;
+   width: 100vw;
+   height: 100vh;
+   filter: brightness(75%);
+}
+
+body .contain1 {
+   display: flex;
+   flex-direction: column;
+   place-items: center;
+   gap: 4em;
+   filter: brightness(100%);
+}
+
+.contain1 {
+  margin: 0.5em
+}
+
+.banner {
+   background-color: black;
+   opacity: 0.77;
+   place-items: center;
+   width: 30rem;
+   height: 12rem;
+   border-radius: 1rem;
+   padding: 4rem;
+   margin: 0.625rem;
+   position: absolute;
+   z-index: 1;
+   box-shadow: 0 0 20px 5px black;
+}
+
+.banner2 {
+   background-color: black;
+   opacity: 0.77;
+   place-items: center;
+   width: 30rem;
+   height: 19rem;
+   border-radius: 1rem;
+   padding: 4rem;
+   margin: 24rem;
+   position: absolute;
+   z-index: 1;
+   box-shadow: 0 0 20px 5px black;
+}
+
+
+.pfp {
+   background-image: url("images/pfp.avif"), url("images/pfp.webp");
+   width: 6.25rem;
+   height: 6.25rem;
+   border-radius: 1.25rem;
+   background-size: cover;
+   z-index: 2;
+   padding: 2rem;
+   margin: 3rem;
+   box-shadow: 0 0 20px 5px aliceblue;
+}
+
+[class="tag"],
+[class="ban-txt"], .text {
+   z-index: 3;
+   padding: 1.8rem;
+   margin: -7rem;
+   color: white;
+   text-shadow: aliceblue 0 0 100px;
+   font-family: normal;
+}
+
+.ban-txt {
+   z-index: 3;
+   margin: 1rem;
+}
+
+#pronoun,
+#bullet,
+#location,
+[class*="fa-location-dot"] {
+   z-index: 3;
+   position: relative;
+}
+
+#pronoun {
+   float: left;
+   left: -2rem;
+}
+
+#bullet {
+   float: left;
+   left: 0.5rem;
+   right: 0rem;
+}
+
+#location {
+   float: right;
+   right: -2.4rem;
+}
+
+[class*="fa-location-dot"] {
+   right: -2.1rem;
+}
+
+.TagLine {
+  padding: 2rem;
+  margin-top: 4.3rem
+}
+.HeadBan2 {
+  padding: 2rem;
+  margin-top: -4.9rem
+}
+.AboutMe {
+  paddint: 2rem;
+  margin-top: 3.6rem
+}
+
+/* BG */
+html {
+   animation: scroll 200s linear infinite;
+   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/bg.avif"), url("images/bg.webp");
+   height: 100%;
+   width: 100%;
+}
+
+@keyframes scroll {
+   100% {
+      background-position: 0px -400%;
+   }
+}
+
+@media (prefers-reduced-motion) {
+   html {
+      animation: scroll 500s linear infinite;
+   }
+}
+  
