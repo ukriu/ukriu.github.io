@@ -1,156 +1,136 @@
-
-
-@font-face {
-  font-family: code;
-  src: url('fonts/PressStart2P-Regular.ttf');
-  font-display: swap;
+:root {
+  --mainbg: #1a1a1a;
+  --cardbg: rgba(1, 1, 1, 0.9);
 }
 
-@font-face {
-  font-family: normal;
-  src: url('fonts/Solway-Medium.ttf');
-  font-display: swap;
+html,
+body {
+  background: var(--mainbg);
 }
 
-@font-face {
-  font-family: barcode;
-  src: url('fonts/LibreBarcode.ttf');
-  font-display: swap;
+* {
+  color: white;
+  text-shadow: 0 0 20px white;
+  font-size: 16px;
+  font-family: 'Urbanist', sans-serif;
 }
 
-
-html {
-   background-color: #1a1a1a;
-   width: 100vw;
-   height: 100vh;
-   filter: brightness(75%);
+#banner {
+  background-color: var(--cardbg);
+  height: 16rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  line-height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 0 0 20px var(--cardbg);
 }
 
-body .contain1 {
-   display: flex;
-   flex-direction: column;
-   place-items: center;
-   gap: 4em;
-   filter: brightness(100%);
+#space {
+  height: 16rem;
 }
-
-.contain1 {
-  margin: 0.5em
-}
-
-.banner {
-   background-color: black;
-   opacity: 0.77;
-   place-items: center;
-   width: 30rem;
-   height: 12rem;
-   border-radius: 1rem;
-   padding: 4rem;
-   margin: 0.625rem;
-   position: absolute;
-   z-index: 1;
-   box-shadow: 0 0 20px 5px black;
-}
-
-.banner2 {
-   background-color: black;
-   opacity: 0.77;
-   place-items: center;
-   width: 30rem;
-   height: 19rem;
-   border-radius: 1rem;
-   padding: 4rem;
-   margin: 24rem;
-   position: absolute;
-   z-index: 1;
-   box-shadow: 0 0 20px 5px black;
-}
-
 
 .pfp {
-   background-image: url("images/pfp.avif"), url("images/pfp.webp");
-   width: 6.25rem;
-   height: 6.25rem;
-   border-radius: 1.25rem;
-   background-size: cover;
-   z-index: 2;
-   padding: 2rem;
-   margin: 3rem;
-   box-shadow: 0 0 20px 5px aliceblue;
-}
-
-[class="tag"],
-[class="ban-txt"], .text {
-   z-index: 3;
-   padding: 1.8rem;
-   margin: -7rem;
-   color: white;
-   text-shadow: aliceblue 0 0 100px;
-   font-family: normal;
-}
-
-.ban-txt {
-   z-index: 3;
-   margin: 1rem;
+  background: url("img/pfp.webp"), grey;
+  height: 8rem;
+  width: 8rem;
+  background-size: contain;
+  border-radius: 100px;
+  box-shadow: 0 0 50px aliceblue;
+  margin-top: -3rem;
+  position: fixed
 }
 
 #pronoun,
-#bullet,
-#location,
-[class*="fa-location-dot"] {
-   z-index: 3;
-   position: relative;
+#d1,
+#location {
+  margin-top: 11.5rem;
+  text-shadow: 0 0 20px white;
+}
+
+#tag {
+  margin-top: 8rem;
+  position: fixed;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  text-align: center;
+  font-size: 100%
 }
 
 #pronoun {
-   float: left;
-   left: -2rem;
+  font-family: 'Urbanist', sans-serif;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  position: fixed;
+  font-size: 90%
 }
 
-#bullet {
-   float: left;
-   left: 0.5rem;
-   right: 0rem;
+
+#aabout {
+  background-color: var(--cardbg);
+  height: auto;
+  width: 80%;
+  color: white;
+  text-align: center;
+  border-radius: 32px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px var(--cardbg);
 }
 
-#location {
-   float: right;
-   right: -2.4rem;
+#t-me,
+#t-s {
+  font-size: 26px;
+  font-family: 'Urbanist', sans-serif;
 }
 
-[class*="fa-location-dot"] {
-   right: -2.1rem;
+#t1-me,
+#t1-s {
+  font-size: 12px;
+  font-family: 'Urbanist', sans-serif;
 }
 
-.TagLine {
-  padding: 2rem;
-  margin-top: 4.3rem
-}
-.HeadBan2 {
-  padding: 2rem;
-  margin-top: -4.9rem
-}
-.AboutMe {
-  paddint: 2rem;
-  margin-top: 3.6rem
+#me {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 95%
 }
 
-/* BG */
-html {
-   animation: scroll 200s linear infinite;
-   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/bg.avif"), url("images/bg.webp");
-   height: 100%;
-   width: 100%;
+#ssocial {
+  background-color: var(--cardbg);
+  height: auto;
+  width: 80%;
+  color: white;
+  text-align: center;
+  border-radius: 32px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px var(--cardbg);
 }
 
-@keyframes scroll {
-   100% {
-      background-position: 0px -400%;
-   }
+.grid-social {
+  width: 90%;
+  text-align: center;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
-@media (prefers-reduced-motion) {
-   html {
-      animation: scroll 500s linear infinite;
-   }
+[class*=fa-] {
+  text-shadow: 0 0 2px white;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 16px;
+  text-decoration: none;
 }
