@@ -118,19 +118,18 @@ body {
 }
 
 .grid-social {
-  width: 90%;
   text-align: center;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  
+  width: 80%;
 }
 
 [class*=fa-] {
   text-shadow: 0 0 2px white;
   text-align: center;
-  padding: 1rem;
-  border: 1px solid white;
+  padding: 0.8rem;
+  border: 0px solid white;
   border-radius: 16px;
   text-decoration: none;
 }
