@@ -1,0 +1,7 @@
+{
+    "name": "HideChatButtons",
+    "description": "Hides the gift and thread buttons in the chat input.",
+    "vendetta": {
+        "icon": "ThreadIcon"
+    }
+}
