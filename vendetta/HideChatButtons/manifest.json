@@ -1,7 +1,14 @@
 {
-    "name": "HideChatButtons",
-    "description": "Hides the gift and thread buttons in the chat input.",
-    "vendetta": {
-        "icon": "ThreadIcon"
+  "name": "HideChatButtons",
+  "description": "Hides the gift and thread buttons in the chat input.",
+  "authors": [
+    {
+      "name": "ukrio",
+      "id": "586962558435590154"
     }
+  ],
+  "main": "src/index.js",
+  "vendetta": {
+    "icon": "ThreadIcon",
+  }
 }
