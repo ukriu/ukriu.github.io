@@ -34,8 +34,8 @@
          #text {font-size: 4rem;}
          #text2 {font-size: 1rem;}
          .container {display: flex; box-sizing: border-box; max-width: 100%; padding: 10px; flex-wrap: wrap; gap: 2rem; justify-content: center;}
-         .container img {flex: 1;width: 20rem; height: 20rem; border-radius: 20px; box-shadow: 0 0 30px aliceblue; object-fit: cover; transition: transform 0.5s;}
-         .container img:hover {flex: 2; transform: scale(1.1); width: 30%; height: 30%; z-index: 1; position: absolute;}
+         .container img {flex-grow: 1;width: 20rem; height: 20rem; border-radius: 20px; box-shadow: 0 0 30px aliceblue; object-fit: cover; transition: flex-grow 0.5s;}
+         .container img:hover {flex-grow: 3; width: 30%; height: 30%; z-index: 1;}
          button {height: 2rem; display: inline-block; padding: 0.5rem; border-radius: 20px; border: none; align-items: center; justify-content: center; display: flex; box-shadow: 0 0 20px aliceblue;}
       </style>
    </head>
