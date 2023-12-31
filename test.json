@@ -8,9 +8,7 @@
         }
     ],
     "semanticColors": {
-        "BACKGROUND_PRIMARY": [
-            "rgba(0, 0, 0, 0.5)"
-        ],
+        "BACKGROUND_PRIMARY": ["transperent"],
     },
     "spec": 2
 }
