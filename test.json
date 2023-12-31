@@ -1,0 +1,16 @@
+{
+    "name": "test",
+    "description": "test",
+    "authors": [
+        {
+            "name": "ukrio",
+            "id": "586962558435590154"
+        }
+    ],
+    "semanticColors": {
+        "BACKGROUND_PRIMARY": [
+            "rgba(0, 0, 0, 0.5)"
+        ],
+    },
+    "spec": 2
+}
