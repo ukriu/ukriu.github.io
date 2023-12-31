@@ -7,8 +7,14 @@
             "id": "586962558435590154"
         }
     ],
+    "spec": 2,
     "semanticColors": {
-        "BACKGROUND_PRIMARY": ["transperent"],
+        "BACKGROUND_PRIMARY": [
+            "transperent"
+        ],
+        "BACKGROUND_FLOATING": [
+            "transperent"
+        ]
     },
-    "spec": 2
+    "rawColors": {}
 }
