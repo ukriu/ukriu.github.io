@@ -9,9 +9,6 @@
     ],
     "spec": 2,
     "semanticColors": {
-        "BACKGROUND_PRIMARY": [
-            "transperent"
-        ],
         "BACKGROUND_FLOATING": [
             "transperent"
         ]
