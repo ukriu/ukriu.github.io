@@ -25,6 +25,7 @@ html, body {
   font-family: 'Urbanist', sans-serif;
   text-shadow: 0 0 10px lavender;
   scroll-behavior: smooth;
+  margin-top: 0;
 }
 .topnav {
   background-color: #060606;
@@ -34,19 +35,32 @@ html, body {
   color: lavender;
   display: flex;
   align-items: center;
+  position: fixed;
+  margin-top: 0.7em;
+  padding: 2px
+}
+#icon {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100px;
+  box-shadow: 0 0 10px lavender;
+  margin: 0.7rem;
 }
 .topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.7rem;
   text-decoration: none;
   font-size: 1rem;
   flex: 1;
+  border-radius: 32px;
 }
-.topnav a:hover {
+.topnav a:hover,
+.topnav a.active {
   background-color: lavender;
   color: black;
+  border-radius: 32px;
 }
 .home, .about {
   width: 100vw;
@@ -74,4 +88,7 @@ html, body {
   text-shadow: 0 0 5px lavender;
   text-decoration: none;
   font-size: 2rem;
+}
+.invis {
+  opacity: 0;
 }
