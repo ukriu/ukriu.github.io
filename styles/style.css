@@ -1,5 +1,31 @@
 :root {}
 
+::-moz-selection {
+  color: black;
+  background: lavenderblush;
+}
+
+::selection {
+  color: black;
+  background: lavenderblush;
+}
+
+a {
+  border-radius: 4px;
+  transition: outline 0.3s ease-in-out;
+}
+
+a:focus {
+  outline: 2px solid lavenderblush;
+  outline-offset: 2px;
+  border-radius: 32px;
+}
+
+a:hover {
+  outline: none;
+}
+
+
 @font-face {
   font-family: 'Urbanist';
   font-style: normal;
