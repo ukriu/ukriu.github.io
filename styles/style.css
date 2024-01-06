@@ -1,6 +1,4 @@
-:root {
-  
-}
+:root {}
 
 @font-face {
   font-family: 'Urbanist';
@@ -10,6 +8,7 @@
   src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4vH5mqace1KqS1.woff2) format('woff2');
   unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 @font-face {
   font-family: 'Urbanist';
   font-style: normal;
@@ -19,7 +18,8 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-html, body {
+html,
+body {
   background-color: #020202;
   color: lavender;
   font-family: 'Urbanist', sans-serif;
@@ -27,8 +27,9 @@ html, body {
   scroll-behavior: smooth;
   margin-top: 0;
 }
+
 .topnav {
-  background-color: #060606;
+  background-color: rgba(6, 6, 6, 0.5);
   overflow: hidden;
   border-radius: 32px;
   border: lavender 1px solid;
@@ -37,15 +38,21 @@ html, body {
   align-items: center;
   position: fixed;
   margin-top: 0.7em;
-  padding: 2px
+  padding: 2px;
+  right: 2em;
+  left: 2em;
+  z-index: 5;
+  height: 4em
 }
+
 #icon {
-  height: 3rem;
-  width: 3rem;
+  height: 2.8rem;
+  width: 2.8rem;
   border-radius: 100px;
   box-shadow: 0 0 10px lavender;
   margin: 0.7rem;
 }
+
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -55,17 +62,22 @@ html, body {
   font-size: 1rem;
   flex: 1;
   border-radius: 32px;
+  margin: 5px;
 }
+
 .topnav a:hover,
 .topnav a.active {
   background-color: lavender;
   color: black;
   border-radius: 32px;
 }
-.home, .about {
-  width: 100vw;
+
+.home,
+.about {
+  width: 100%;
   height: 100vh;
 }
+
 #pfp {
   background: url("img/pfp.webp"), lavender;
   height: 10rem;
@@ -74,21 +86,31 @@ html, body {
   border-radius: 100px;
   box-shadow: 0 0 45px lavender;
 }
+
 #line {
   font-size: 2rem;
   font-family: 'Urbanist', sans-serif;
   text-shadow: 0 0 10px lavender;
   color: lavender;
 }
+
 #home-size {
-  margin-top: 39%
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
 }
+
 [class*="fa-"] {
   color: lavender;
   text-shadow: 0 0 5px lavender;
   text-decoration: none;
   font-size: 2rem;
 }
+
 .invis {
   opacity: 0;
 }
