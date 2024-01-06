@@ -49,7 +49,6 @@ body {
   height: 2.8rem;
   width: 2.8rem;
   border-radius: 100px;
-  box-shadow: 0 0 10px lavender;
   margin: 0.7rem;
 }
 
@@ -84,13 +83,13 @@ body {
   width: 10rem;
   background-size: contain;
   border-radius: 100px;
-  box-shadow: 0 0 45px lavender;
+  box-shadow: 0 0 30px lavender;
 }
 
 #line {
   font-size: 2rem;
   font-family: 'Urbanist', sans-serif;
-  text-shadow: 0 0 10px lavender;
+  text-shadow: 0 0 5px lavender;
   color: lavender;
 }
 
@@ -110,7 +109,12 @@ body {
   text-decoration: none;
   font-size: 2rem;
 }
-
+iconify-icon {
+  color: lavender;
+  text-decoration: none;
+  font-size: 4em;
+  padding: 0;
+}
 .invis {
   opacity: 0;
 }
