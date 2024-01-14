@@ -56,49 +56,43 @@ body {
   font-family: "Urbanist", sans-serif;
   text-shadow: 0 0 10px lavender;
   scroll-behavior: smooth;
-  margin-top: 0;
+  margin-top: 0.5rem;
 }
 
-.topnav {
-  background-color: rgba(6, 6, 6, 0.5);
+ul { 
+  list-style-type: none;
+  text-align: center;
+  border: 1px solid lavender;
   border-radius: 32px;
-  border: lavender 1px solid;
-  color: lavender;
-  display: flex;
-  align-items: center;
+  width: fit-content;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0.1em;
   position: fixed;
-  flex: 1;
-  margin-top: 0.7em;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  height: 3em;
-  width: 90%;
+  background: rgba(6, 6, 6, 0.5);
+  padding: 0.2em;
 }
 
-#icon {
-  height: auto;
+li {
+  display: inline-block;
+  vertical-align: middle;
+}
+li a {
+  color: lavender;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 32px;
+}
+
+li img {
+  height: 2.5rem;
   width: 2.5rem;
   border-radius: 100px;
-  margin: 0.7rem;
-}
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  font-size: 1rem;
-  flex: 1;
-  border-radius: 32px;
-  margin: 5px;
-  transition: background-color 0.3s, color 0.3s;
 }
-
-.topnav a:hover,
-.topnav a.active {
+li a:hover,
+li a.active {
   background-color: lavender;
   color: black;
   padding: 0.6rem 1rem;
