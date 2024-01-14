@@ -61,23 +61,25 @@ body {
 
 .topnav {
   background-color: rgba(6, 6, 6, 0.5);
-  overflow: hidden;
   border-radius: 32px;
   border: lavender 1px solid;
   color: lavender;
   display: flex;
   align-items: center;
   position: fixed;
+  flex: 1;
+  flex-wrap: nowrap;
   margin-top: 0.7em;
-  padding: 2px;
-  right: 2em;
-  left: 2em;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
   z-index: 5;
-  height: 4em;
+  height: 3em;
+  width: 90%;
 }
 
 #icon {
-  height: 2.5rem;
+  height: auto;
   width: 2.5rem;
   border-radius: 100px;
   margin: 0.7rem;
@@ -87,18 +89,21 @@ body {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 0.7rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
   font-size: 1rem;
   flex: 1;
+  flex-wrap: nowrap;
   border-radius: 32px;
   margin: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .topnav a:hover,
 .topnav a.active {
   background-color: lavender;
   color: black;
+  padding: 0.6rem 1rem;
   border-radius: 32px;
 }
 
