@@ -26,6 +26,30 @@ a:hover {
   outline: none;
 }
 
+/* scroll bar */
+/* size */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10%;
+}
+
+/* Track */
+::-webkit-scrollbar-track { 
+  background: #020202;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lavender; 
+  border-radius: 32px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lavenderblush; 
+}
+
+/* fonts */
 @font-face {
   font-family: "Urbanist";
   font-style: normal;
@@ -48,6 +72,11 @@ a:hover {
     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
     U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
+
+
+
 
 html,
 body {
@@ -150,3 +179,11 @@ iconify-icon {
   font-size: 1.2rem;
 }
 */
+#mascot {
+  right: 0;
+  bottom: 0;
+  max-height: 20%;
+  max-width: 20%;
+  position: fixed;
+  text-decoration: none;
+}
