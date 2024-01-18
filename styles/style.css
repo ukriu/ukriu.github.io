@@ -100,6 +100,7 @@ ul.nav {
   position: fixed;
   background: rgba(6, 6, 6, 0.5);
   padding: 0.2em;
+  z-index: 10;
 }
 
 li.navitem {
@@ -144,12 +145,25 @@ li.navitem a.active {
 }
 
 #pfp {
-  background: url("img/pfp.webp"), lavender;
+  background: lavender url("img/pfp.webp") no-repeat;
   height: 10rem;
   width: 10rem;
   background-size: contain;
   border-radius: 100px;
   box-shadow: 0 0 30px lavender;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#decor {
+  height: 10rem;
+  width: 10rem;
+  background: url("img/decor.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 2;
 }
 
 #line {
