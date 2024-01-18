@@ -145,18 +145,28 @@ li.navitem a.active {
 }
 
 #pfp {
-  background: url("img/old-pfp.webp");
-  background-size: 100% 100%;
   position: relative;
   height: 10rem;
   width: 10rem;
-  background-size: contain;
   border-radius: 100px;
   box-shadow: 0 0 30px lavender;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+}
+
+#pfp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: lavender url("img/pfp.png") no-repeat;
+  background-size: 107%;
+  border-radius: inherit;
+  background-position: center;
 }
 
 #decor {
