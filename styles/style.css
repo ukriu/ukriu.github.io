@@ -59,7 +59,7 @@ body {
   margin-top: 0.5rem;
 }
 
-ul { 
+ul.nav { 
   list-style-type: none;
   text-align: center;
   border: 1px solid lavender;
@@ -73,11 +73,11 @@ ul {
   padding: 0.2em;
 }
 
-li {
+li.navitem {
   display: inline-block;
   vertical-align: middle;
 }
-li a {
+li.navitem a {
   color: lavender;
   text-decoration: none;
   padding: 0.6rem 1rem;
@@ -85,14 +85,15 @@ li a {
   border-radius: 32px;
 }
 
-li img {
+li.navitem img {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 100px;
-
+  vertical-align: middle;
 }
-li a:hover,
-li a.active {
+
+li.navitem a:hover,
+li.navitem a.active {
   background-color: lavender;
   color: black;
   padding: 0.6rem 1rem;
