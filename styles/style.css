@@ -163,7 +163,7 @@ li.navitem a.active {
   left: 0;
   right: 0;
   bottom: 0;
-  background: lavender url("img/pfp.png") no-repeat;
+  background: lavender url("img/pfp.webp") no-repeat;
   background-size: 107%;
   border-radius: inherit;
   background-position: center;
