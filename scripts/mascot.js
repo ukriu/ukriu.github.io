@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const randomImageNumber = Math.floor(Math.random() * 69) + 1;
 
-    const imageUrl = `mascots/${randomImageNumber}.webp`;
+    const imageUrl = `../styles/img/mascots/${randomImageNumber}.webp`;
 
     const imgElement = document.getElementById('mascot');
 
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     imgElement.onerror = function () {
         console.error('Error loading image, setting fallback image.');
-        imgElement.src = 'styles/img/fallback-mascot.webp';
+        imgElement.src = '../styles/img/m-fallback.webp';
     };
+  
 });

@@ -212,4 +212,5 @@ iconify-icon {
   max-width: 20%;
   position: fixed;
   text-decoration: none;
+  border-top-left-radius: 32px;
 }
