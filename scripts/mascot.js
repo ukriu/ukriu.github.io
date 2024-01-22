@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const randomImageNumber = Math.floor(Math.random() * 69) + 1;
 
-    const imageUrl = `../styles/img/mascots/${randomImageNumber}.webp`;
+    const imageUrl = `../styles/mascots/${randomImageNumber}.webp`;
 
     const imgElement = document.getElementById('mascot');
 
