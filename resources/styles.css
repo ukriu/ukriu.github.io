@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Satoshi";
-  src: url("resources/woff2.woff2") format("woff2"), url("resources/woff.woff") format("woff"), url("resources/ttf.ttf") format("truetype");
+  src: url("font/satoshi.woff2") format("woff2"), url("font/satoshi.woff") format("woff"), url("font/satoshi.ttf") format("truetype");
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -10,12 +10,13 @@
   --background: #0a0a0a;
   --accent: #a13ecf9c;
   --font: "Satoshi", sans-serif !important;
-  --background-img: url("https://images.squarespace-cdn.com/content/v1/5c8d778c7fdcb876989fc714/1596572089558-TEJ527CGZF64KTRM6FT6/road-landscape-nature-forest-39811.jpg");
+  --background-img: url("images/bg.webp"), url("images/bg.jpg");
 }
 
 html {
   background: var(--background);
   overflow: hidden;
+  font-family: var(--font);
 }
 
 body {

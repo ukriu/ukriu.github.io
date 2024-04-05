@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://ukrioo.github.io/" />
     <meta property="og:title" content="@ukrio" />
     <meta property="og:description" content="My small personal website!" />
-    <meta property="og:image" content="https://ukrioo.github.io/resources/meta-img.png" />
+    <meta property="og:image" content="https://ukrioo.github.io/resources/images/meta-img.webp" />
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta http-equiv="content-language" content="en" />
@@ -90,11 +90,10 @@
     function removeOverlay() {
       var overlay = document.getElementById("overlay");
       var content = document.getElementById("content");
-      overlay.classList.add("hide"); // Add the 'hide' class to hide the overlay
-      content.style.display = "block";
+      overlay.classList.add("hide");
     }
     document.addEventListener("contextmenu", function (event) {
-      event.preventDefault(); // Prevent right-click menu
+      event.preventDefault();
     });
   </script>
 </html>
