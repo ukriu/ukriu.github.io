@@ -1,0 +1,123 @@
+@font-face {
+   font-family: "Satoshi";
+   src: url("resources/woff2.woff2") format("woff2"), url("resources/woff.woff") format("woff"), url("resources/ttf.ttf") format("truetype");
+   font-weight: 300 900;
+   font-display: swap;
+   font-style: normal;
+}
+:root {
+   --background: #0a0a0a;
+   --accent: lavenderblush;
+   --font: "Satoshi", sans-serif !important;
+   --background-img: url("https://images.squarespace-cdn.com/content/v1/5c8d778c7fdcb876989fc714/1596572089558-TEJ527CGZF64KTRM6FT6/road-landscape-nature-forest-39811.jpg");
+}
+html {
+   background: var(--background);
+}
+body {
+   color: var(--accent);
+   font-family: var(--font);
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+   margin: 0;
+   display: flex;
+   height: 100vh;
+}
+
+.background-container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--background-img), var(--background);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   filter: blur(5px) brightness(70%);
+   z-index: -1;
+}
+
+#lanyard-container {
+   position: relative;
+   background: rgba(12, 12, 12, 0.8);
+   max-width: 430px;
+   max-height: 230px;
+   padding: 50px;
+   border-radius: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   flex-direction: column; /* Added to align items vertically */
+}
+.contain-the-container {
+	padding: 20px;	
+}
+#lanyard-container img {
+   display: block;
+   width: 35%;
+   height: 35%;
+   border-radius: 50%;
+}
+
+
+#socialIcons a {
+   text-decoration: none;
+   color: lavender;
+   font-size: 3em;
+}
+
+iconify-icon,
+#lanyard-container {
+   transition: transform 0.3s ease-in-out;
+}
+iconify-icon:hover {
+   transform: scale(1.2);
+}
+#lanyard-container:hover {
+   transform: scale(1.07);
+}
+
+::-moz-selection {
+   background: #ffffff;
+   color: #080808;
+}
+::selection {
+   background: #ffffff;
+   color: #080808;
+}
+
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--background-img), var(--background);
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   filter: brightness(50%);
+   z-index: 98;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   opacity: 1;
+   visibility: visible;
+   transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.overlay.hide {
+   opacity: 0;
+   visibility: hidden;
+}
+.overlay button {
+   background-color: transparent;
+   border: none;
+   color: white;
+   font-size: 1.75rem;
+   cursor: pointer;
+   z-index: 100;
+}

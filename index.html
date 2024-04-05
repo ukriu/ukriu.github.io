@@ -1,115 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link rel="stylesheet" href="styles/style.css">
-      <meta name="robots" content="index, follow">
-      <!-- Prevent caching -->
-      <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-      <meta http-equiv="Pragma" content="no-cache">
-      <meta http-equiv="Expires" content="0">
-      <!-- Primary Meta Tags -->
-      <title>@ukrio</title>
-      <meta name="title" content="@ukrio">
-      <meta name="description" content="My small persona website!">
-      <meta name="theme-color" content="#1a1a1a">
-      <!-- Open Graph / Facebook -->
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="https://ukrio.is-a.dev/">
-      <meta property="og:title" content="@ukrio">
-      <meta property="og:description" content="My small persona website!">
-      <meta property="og:image" content="https://ukrio.is-a.dev/styles/img/meta-img.webp">
-      <!-- Twitter -->
-      <meta property="twitter:card" content="summary_large_image">
-      <meta http-equiv="content-language" content="en">
-      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-      <link rel="manifest" href="favicon/site.webmanifest">
-      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="robots" content="index, follow" />
+    <meta content="website" property="og:type" />
+    <meta content="@ukrio" name="author" />
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- Primary Meta Tags -->
+    <title>@ukrio</title>
+    <meta name="theme-color" content="#a13ecf9c" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:url" content="https://ukrioo.github.io/" />
+    <meta property="og:title" content="@ukrio" />
+    <meta property="og:description" content="My small personal website!" />
+    <meta property="og:image" content="https://ukrioo.github.io/resources/meta-img.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta http-equiv="content-language" content="en" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <!-- External Script -->
+	<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="resources/styles.css" />
+  </head>
+  <body>
+    <div class="background-container"></div>
+    <div class="content-container">
+      <div class="overlay" id="overlay">
+        <button onclick="removeOverlay()">Click anywhere to view the website!</button>
+      </div>
+      <audio autoplay loop src="resources/music.mp3" type="audio/mpeg"></audio>
+      <div id="lanyard-container">
+        <img src="https://lanyard.cnrad.dev/api/586962558435590154?bg=transperent&borderRadius=unset&animated=true&idleMessage=Not%20doing%20anything%20right%20now!" />
+      </div>
+      <br />
+      <div id="socialIcons">
+        <a href="https://discord.com/users/586962558435590154" title="Discord - @ukrio" target="_blank">
+          <iconify-icon icon="ic:baseline-discord"></iconify-icon>
+        </a>
+        <a href="https://github.com/ukrioo" title="GitHub - @ukrioo" target="_blank">
+          <iconify-icon icon="mdi:github"></iconify-icon>
+        </a>
+        <a href="https://instagram.com/ukrioo" title="Instagram - @ukrioo" target="_blank">
+          <iconify-icon icon="mdi:instagram"></iconify-icon>
+        </a>
+        <a href="https://anilist.co/user/ukrio/" title="Anilist.co - @ukrio" target="_blank">
+          <iconify-icon icon="simple-icons:anilist"></iconify-icon>
+        </a>
+        <br />
+        <a href="https://www.youtube.com/@ukrioo?sub_confirmation=1" title="YouTube - @ukrioo" target="_blank">
+          <iconify-icon icon="mdi:youtube"></iconify-icon>
+        </a>
+        <a href="https://www.reddit.com/user/ukrio" title="Reddit - @ukrio" target="_blank">
+          <iconify-icon icon="ic:baseline-reddit"></iconify-icon>
+        </a>
+        <a href="https://twitter.com/ukriooo" title="Twitter / 𝕏 - @ukrioo" target="_blank">
+          <iconify-icon icon="mingcute:twitter-fill"></iconify-icon>
+        </a>
+        <a href="https://open.spotify.com/user/5me8mcvucka8yo020z93jpc03" title="Spotify - @ukrio" target="_blank">
+          <iconify-icon icon="mdi:spotify"></iconify-icon>
+        </a>
+        <a href="https://steamcommunity.com/id/ukrio/" title="Steam - @ukrio" target="_blank">
+          <iconify-icon icon="mdi:steam"></iconify-icon>
+        </a>
+        <a href="https://www.twitch.tv/ukriooo" title="Twitch - @ukriooo" target="_blank">
+          <iconify-icon icon="ph:twitch-logo-bold"></iconify-icon>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector(".overlay").addEventListener("click", function () {
+        var audio = document.querySelector("audio");
+        audio.play();
+        removeOverlay();
+      });
+    });
 
-   </head>
-   <body>
-      <ul class="nav">
-         <li class="navitem"><img src="styles/img/icon.webp" id="icon"></li>
-         <li class="navitem"><a href="#home" class="nav-link">Home</a></li>
-         <li class="navitem"><a href="#about" class="nav-link">About</a></li>
-         <li class="navitem"><a href="#projects" class="nav-link">Projects</a></li>
-         <li class="navitem"><a href="#donate" class="nav-link">Donate</a></li>
-      </ul>
-      <img id="mascot">
-      <section id="home" class="section">
-         <div class="home">
-            <center>
-               <div id="pfp"><div id="decor"></div></div>
-               <br>
-               <div id="line">Heya! I’m <a id="bleh">ukrio</a>!</div>
-               <br>
-               <div id="socialIcons">
-                  <a href="https://discord.com/users/586962558435590154" title="Discord - @ukrio" target="_blank">
-                     <iconify-icon icon="ic:baseline-discord"></iconify-icon>
-                  </a>
-                  <a href="https://github.com/ukrioo" title="GitHub - @ukrioo" target="_blank">
-                     <iconify-icon icon="mdi:github"></iconify-icon>
-                  </a>
-                  <a href="https://instagram.com/ukrioo" title="Instagram - @ukrioo" target="_blank">
-                     <iconify-icon icon="mdi:instagram"></iconify-icon>
-                  </a>
-                  <a href="https://anilist.co/user/ukrio/" title="Anilist.co - @ukrio" target="_blank">
-                     <iconify-icon icon="simple-icons:anilist"></iconify-icon>
-                  </a><br>
-                  <a href="https://www.youtube.com/@ukrioo?sub_confirmation=1" title="YouTube - @ukrioo" target="_blank">
-                     <iconify-icon icon="mdi:youtube"></iconify-icon>
-                  </a>
-                  <a href="https://www.reddit.com/user/ukrio" title="Reddit - @ukrio" target="_blank">
-                     <iconify-icon icon="ic:baseline-reddit"></iconify-icon>
-                  </a>
-                  <a href="https://twitter.com/ukriooo" title="Twitter / 𝕏 - @ukrioo" target="_blank">
-                     <iconify-icon icon="mingcute:twitter-fill"></iconify-icon>
-                  </a>
-                  <a href="https://open.spotify.com/user/5me8mcvucka8yo020z93jpc03" title="Spotify - @ukrio" target="_blank">
-                     <iconify-icon icon="mdi:spotify"></iconify-icon>
-                  </a>
-                  <a href="https://steamcommunity.com/id/ukrio/" title="Steam - @ukrio" target="_blank">
-                     <iconify-icon icon="mdi:steam"></iconify-icon>
-                  </a>
-                  <a href="https://www.twitch.tv/ukriooo" title="Twitch - @ukriooo" target="_blank">
-                     <iconify-icon icon="ph:twitch-logo-bold"></iconify-icon>
-                  </a>
-               </div>
-            </center>
-         </div>
-      </section>
-      <br>
-      <section id="about" class="section">
-         <div class="about">
-            <center>
-               <div id="ab-text">
-                  Heya! I'm ukrio, I love having a bad taste in music and being addicted to coffee.<br>People say I'm a bit of a nerd, but I'm actually pretty cool (personal opinion).<br>I usually make shit on my phone,<br>Did you know? This site has been mostly made on my mobile!<br>I'm also a fan of the anime, manga and games. And I like not studying :3
-               </div>
-            </center>
-         </div>
-      </section>
-     <br>
-      <section id="projects" class="section">
-         <div class="projects">
-            <center>
-               soon:tm:
-            </center>
-         </div>
-      </section>
-     <br>
-      <section id="donate" class="section">
-         <div class="donate">
-            <center>
-               soon
-            </center>
-         </div>
-      </section>
-
-     <script src="scripts/mascot.js"></script>
-      <script src="scripts/sections.js"></script>
-   </body>
+    function removeOverlay() {
+      var overlay = document.getElementById("overlay");
+      var content = document.getElementById("content");
+      overlay.classList.add("hide"); // Add the 'hide' class to hide the overlay
+      content.style.display = "block";
+    }
+    document.addEventListener("contextmenu", function (event) {
+      event.preventDefault(); // Prevent right-click menu
+    });
+  </script>
 </html>
