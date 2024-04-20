@@ -64,21 +64,26 @@ body {
   pointer-events: none;
 }
 
-#socialIcons a {
+#Icons a {
   text-decoration: none;
   color: lavender;
-  font-size: 3em;
+}
+#Icons {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-iconify-icon,
+iconify-icon, i,
 #lanyard-container {
   transition: transform 0.3s ease-in-out;
 }
 
-iconify-icon:hover {
+iconify-icon {margin: 5px 5px -4px 5px; font-size: 32px;}
+i {font-size: 32px;margin: 5px;}
+iconify-icon:hover, i:hover {
   transform: scale(1.2);
 }
-
 #lanyard-container:hover {
   transform: scale(1.07);
 }
