@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="index, follow">
-    <!-- Prevent caching -->
-    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <!-- Primary Meta Tags x -->
+    <!-- Primary Meta Tags x-->
     <title>@ukrio</title>
     <meta name="title" content="@ukrio">
     <meta name="description" content="My small persona website!">
@@ -22,7 +18,6 @@
     <meta property="og:image" content="https:/ukrioo.github.io/resources/images/meta-img.webp">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta http-equiv="content-language" content="en">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -30,7 +25,7 @@
     <!-- External Script -->
 	<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
     <!-- External CSS -->
-    <link rel="stylesheet" href="resources/styles.css" />
+    <link rel="stylesheet" href="resources/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   </head>
   <body>
@@ -39,11 +34,11 @@
       <div class="overlay" id="overlay">
         <button onclick="removeOverlay()">Click anywhere to view the website!</button>
       </div>
-      <audio autoplay loop src="resources/music.mp3" type="audio/mpeg"></audio>
+      <audio autoplay loop src="resources/music.mp3"></audio>
       <div id="lanyard-container">
-        <img src="https://lanyard.cnrad.dev/api/586962558435590154?bg=transperent&borderRadius=unset&animated=true&idleMessage=Not%20doing%20anything%20right%20now!" alt="Discord Account Status" width="auto" height="auto" />
+        <img src="https://lanyard.cnrad.dev/api/586962558435590154?bg=transperent&borderRadius=unset&animated=true&idleMessage=Not%20doing%20anything%20right%20now!" alt="Discord Account Status">
       </div>
-      <br />
+      <br>
       <div id="Icons">
         <a href="https://discord.com/users/586962558435590154" title="Discord - @ukrio" target="_blank">
           <i class="fa-brands fa-discord"></i>
@@ -60,7 +55,7 @@
         <a href="https://anilist.co/user/ukrio/" title="Anilist.co - @ukrio" target="_blank">
           <iconify-icon icon="simple-icons:anilist"></iconify-icon>
         </a>
-        <br />
+        <br>
         <a href="https://www.youtube.com/@ukrioo?sub_confirmation=1" title="YouTube - @ukrioo" target="_blank">
           <i class="fa-brands fa-youtube"></i>
         </a>
@@ -78,23 +73,23 @@
         </a>
       </div>
     </div>
-  </body>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector(".overlay").addEventListener("click", function () {
-        var audio = document.querySelector("audio");
-        audio.play();
-        removeOverlay();
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelector(".overlay").addEventListener("click", function () {
+          var audio = document.querySelector("audio");
+          audio.play();
+          removeOverlay();
+        });
       });
-    });
 
-    function removeOverlay() {
-      var overlay = document.getElementById("overlay");
-      var content = document.getElementById("content");
-      overlay.classList.add("hide");
-    }
-    document.addEventListener("contextmenu", function (event) {
-      event.preventDefault();
-    });
-  </script>
+      function removeOverlay() {
+        var overlay = document.getElementById("overlay");
+        var content = document.getElementById("content");
+        overlay.classList.add("hide");
+      }
+      document.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+      });
+    </script>
+  </body>
 </html>
