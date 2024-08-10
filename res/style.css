@@ -21,7 +21,7 @@ body {
     background-repeat: repeat;
     background-clip: initial;
     background-color: #000;
-    min-height: 97vh;
+    min-height: 95vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
