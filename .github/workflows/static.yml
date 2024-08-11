@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on minify.yml being successful
   workflow_run:
-    workflows: ["Minify Code and Push to Minified Branch"]
+    workflows: ["Sync, Minify and Push to Minified Branch"]
     types:
       - completed
       
