@@ -26,9 +26,9 @@ jobs:
 
     - name: Minify HTML, CSS, and JS
       run: |
-        npx html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
-        npx cleancss -o {} {} \;
-        npx terser --compress --mangle --output {} -- {} \;
+        find . -name "*.html" -exec npx html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
+        find . -name "*.css" -exec npx cleancss -o {} {} \;
+        find . -name "*.js" -exec npx terser --compress --mangle --output {} -- {} \;
 
     - name: Commit and Push Minified Files to Minified Branch
       run: |
