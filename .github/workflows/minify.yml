@@ -21,6 +21,9 @@ jobs:
     - name: Install pnpm
       run: npm install -g pnpm
 
+    - name: Set SHELL environment variable
+      run: echo "SHELL=/bin/bash" >> $GITHUB_ENV
+
     - name: Set up pnpm global bin directory
       run: |
         pnpm setup
