@@ -41,6 +41,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
         git add -A
         git commit -m "Minified HTML, CSS, and JS"
         git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io.git" minified
