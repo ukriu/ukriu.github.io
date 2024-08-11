@@ -1,4 +1,4 @@
-name: Minify and Push to Minified Branch
+name: Sync, Minify, and Push to Minified Branch
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main  # Or your default branch
 
 jobs:
-  minify:
+  sync-minify:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,13 +16,24 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'
+        node-version: '18'
 
     - name: Install pnpm
       run: npm install -g pnpm
 
     - name: Install minification tools locally
       run: pnpm add -D html-minifier-terser clean-css-cli terser
+
+    - name: Fetch all branches
+      run: git fetch --all
+
+    - name: Create or checkout the minified branch
+      run: |
+        git checkout minified || git checkout -b minified
+
+    - name: Sync minified branch with main
+      run: |
+        git merge origin/main --no-edit || git rebase origin/main
 
     - name: Minify HTML, CSS, and JS
       run: |
@@ -34,9 +45,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git checkout -b minified
         git add -A
-        git commit -m "Minified HTML, CSS, and JS"
-        git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io" minified
+        git commit -m "Sync with main and minify HTML, CSS, and JS"
+        git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io.git" minified
