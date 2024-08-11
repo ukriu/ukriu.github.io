@@ -1,77 +1,75 @@
 @font-face {
     font-family: 'fixedsys_excelsior_3.01Rg';
-    src: url('media/font.woff2') format('woff2'),
-         url('media/font.woff') format('woff');
+    src: url('media/font.woff2') format('woff2'), url('media/font.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 :root {
     font-family: 'fixedsys_excelsior_3.01Rg';
     color: lavenderblush;
     --fontsize: 16px;
 }
-
+html, body {margin: 0;}
 body {
-    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     max-width: 650px;
-    background-image: url(media/bg.gif);
+    margin: 0 auto;
+    background: url(media/bg.gif), #000;
     background-attachment: fixed;
     image-rendering: pixelated;
     background-repeat: repeat;
     background-clip: initial;
-    background-color: #000;
-    min-height: 95vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
 }
-img {
-    max-width: 650px;
-    image-rendering: auto;
-}
-header{
-    min-height:50px;
-}
-hr {
+header {
+    flex-shrink: 0;
     width: 100%;
+    min-height: 50px;
+    z-index: 1000;
+}
+main.content {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 footer {
-    margin-top: auto;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: inherit;
+    z-index: 1000;
+    flex-shrink: 0;
+    padding: 10px 0;
 }
-@media screen and (max-width: 700px) {
-    body, img {
-        max-width: 90%;
-    }
+img {
+    max-width: 100%;
+    image-rendering: pixelated;
 }
-h1 {
-    font-size: 32px;
-    font-weight: 100;
-}
-h2 {
-    font-weight: 100;
-}
+hr {width: 100%;}
+@media screen and (max-width: 700px) {body, img {max-width: 90%;}}
+h1 {font-size: 32px; font-weight: 100;}
+h2 {font-weight: 100;}
 a, p {
     text-decoration: none;
     font-size: var(--fontsize);
     font-weight: 100;
 }
-a:link    {color: violet;}
+a:link {color: violet;}
 a:visited {color: violet;}
-a:hover   {color: lavenderblush;}
-a:active  {color: crimson;}
+a:hover {color: lavenderblush;}
+a:active {color: crimson;}
 #playButton {color: violet;}
 .nav {
     text-align: center;
     font-family: var(--font), sans-serif;
     font-size: var(--fontsize);
 }
-.link {
-    color: #ff00ff;
+.content {text-align: center;}
+#container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
-.content {
-    text-align: center;
-}
-#container{width:100%;}
-#left{float:left;width:100px;}
-#right{float:right;width:100px;}
-#center{margin:0 auto;width:100px;}
+#left, #right {width: auto;}
