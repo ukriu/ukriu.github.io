@@ -3,6 +3,7 @@
     src: url('media/font.woff2') format('woff2'), url('media/font.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 :root {
     font-family: 'fixedsys_excelsior_3.01Rg';
