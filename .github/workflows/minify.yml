@@ -1,0 +1,38 @@
+name: Minify and Push to Minified Branch
+
+on:
+  push:
+    branches:
+      - main  # Or your default branch
+
+jobs:
+  minify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+
+    - name: Install minification tools
+      run: |
+        pnpm install -g html-minifier-terser clean-css-cli terser
+
+    - name: Minify HTML, CSS, and JS
+      run: |
+        find . -name "*.html" -exec html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
+        find . -name "*.css" -exec cleancss -o {} {} \;
+        find . -name "*.js" -exec terser --compress --mangle --output {} -- {} \;
+
+    - name: Commit and Push Minified Files to Minified Branch
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git checkout -b minified
+        git add -A
+        git commit -m "Minified HTML, CSS, and JS"
+        git push --force origin minified
