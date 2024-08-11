@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '20'
 
     - name: Install pnpm
       run: npm install -g pnpm
@@ -29,11 +29,7 @@ jobs:
 
     - name: Create or checkout the minified branch
       run: |
-        git checkout minified || git checkout -b minified
-
-    - name: Sync minified branch with main
-      run: |
-        git merge origin/main --no-edit || git rebase origin/main
+        git checkout -B minified origin/main
 
     - name: Minify HTML, CSS, and JS
       run: |
@@ -46,5 +42,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git add -A
-        git commit -m "Sync with main and minify HTML, CSS, and JS"
+        git commit -m "Minified HTML, CSS, and JS"
         git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io.git" minified
