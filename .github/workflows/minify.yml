@@ -39,4 +39,5 @@ jobs:
         git checkout -b minified
         git add -A
         git commit -m "Minified HTML, CSS, and JS"
-        git push --force "https://${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/ukrioo/ukrioo.github.io.git" minified
+        git remote set-url origin "https://${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/ukrioo/ukrioo.github.io.git"
+        git push --force origin minified
