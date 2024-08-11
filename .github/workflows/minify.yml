@@ -13,6 +13,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Install pnpm
+      run: |
+        curl -fsSL https://get.pnpm.io/install.sh | node - add --global pnpm
+
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
