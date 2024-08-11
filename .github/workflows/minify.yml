@@ -1,4 +1,4 @@
-name: Sync, Minify, and Push to Minified Branch
+name: Sync, Minify and Push to Minified Branch
 
 on:
   push:
