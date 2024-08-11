@@ -21,24 +21,14 @@ jobs:
     - name: Install pnpm
       run: npm install -g pnpm
 
-    - name: Set SHELL environment variable
-      run: echo "SHELL=/bin/bash" >> $GITHUB_ENV
-
-    - name: Set up pnpm global bin directory
-      run: |
-        pnpm setup
-        export PNPM_HOME="${HOME}/.local/share/pnpm"
-        export PATH="$PNPM_HOME:$PATH"
-
-    - name: Install minification tools
-      run: |
-        pnpm install -g html-minifier-terser clean-css-cli terser
+    - name: Install minification tools locally
+      run: pnpm add -D html-minifier-terser clean-css-cli terser
 
     - name: Minify HTML, CSS, and JS
       run: |
-        find . -name "*.html" -exec html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
-        find . -name "*.css" -exec cleancss -o {} {} \;
-        find . -name "*.js" -exec terser --compress --mangle --output {} -- {} \;
+        npx html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
+        npx cleancss -o {} {} \;
+        npx terser --compress --mangle --output {} -- {} \;
 
     - name: Commit and Push Minified Files to Minified Branch
       run: |
