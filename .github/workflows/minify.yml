@@ -31,10 +31,12 @@ jobs:
         find . -name "*.js" -exec npx terser --compress --mangle --output {} -- {} \;
 
     - name: Commit and Push Minified Files to Minified Branch
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git checkout -b minified
         git add -A
         git commit -m "Minified HTML, CSS, and JS"
-        git push --force origin minified
+        git push --force "https://${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/ukrioo/ukrioo.github.io.git" minified
