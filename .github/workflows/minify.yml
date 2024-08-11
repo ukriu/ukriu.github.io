@@ -39,4 +39,4 @@ jobs:
         git checkout -b minified
         git add -A
         git commit -m "Minified HTML, CSS, and JS"
-        git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io.git" minified
+        git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io" minified
