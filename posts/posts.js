@@ -73,8 +73,9 @@ function displayPosts(posts) {
         if (post.title) {
             const title = document.createElement('h2');
             title.textContent = post.title;
-            title.style.fontSize = '1.5em';
+            title.style.fontSize = '1.8em';
             title.style.marginTop = '0.2em';
+            title.style.marginBottom = '0.4em';
             article.appendChild(title);
         }
 
