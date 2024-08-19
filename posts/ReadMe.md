@@ -26,8 +26,9 @@ Here's the basic structure for each post:
   }
 ]
 ```
-* Here are the formatting options available for posts:<br>
- - **Bold Text** (`strong`): `\*\*Bold Text\*\*<br>
+
+Here are the formatting options available for posts:<br>
+ - **Bold Text** (`<strong>`): \*\*Bold Text\*\*<br>
  - *Italic Text* (`<em>`): \*Italic Text\* <br> 
  - `Inline Code Blocks` (`<code>`): \`text\`<br>
  - [Masked Links](https://ukrioo.github.io/) (`<a href="">`): \[Masked Links\]\(url\)<br>
