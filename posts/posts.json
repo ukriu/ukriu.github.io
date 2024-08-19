@@ -2,9 +2,9 @@
   {
     "order": 1,
     "timestamp": "19th August, 2024",
-    "title": "First Post!",
+    "title": "first post!",
     "thumbnail": "https://raw.githubusercontent.com/ukrioo/archive/main/v4/resources/images/meta-img.webp",
-    "description": "Hello! This is the first ever post by me (ukrio)!\nThis is purely an example post so that I can work on displaying this.",
+    "description": "hello! this is the first ever post by me (ukrio)!\nthis is purely an example post so that i can work on displaying this.",
     "author": "ukrio",
     "author_pfp": "../res/media/pfp.webp",
     "author_link": "../contact/"
@@ -12,8 +12,8 @@
   {
     "order": 2,
     "timestamp": "19th August, 2024",
-    "title": "The second example post.",
-    "description": "Again, The second example post!\nYay",
+    "title": "about the archives",
+    "description": "you can visit the archive page by <a href='https://ukrioo.github.io/archive'>clicking here.</a>\nthe archives contain all the recorded previous itterations of my site\ncurrently you can access <a href='https://ukrioo.github.io/archive/v3'>v3</a> and <a href='https://ukrioo.github.io/archive/v4'>v4</a>!\ni lost the other ones",
     "author": "ukrio",
     "author_pfp": "../res/media/pfp.webp",
     "author_link": "../contact"
