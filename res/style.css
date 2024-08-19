@@ -31,10 +31,10 @@ header {
 }
 main.content {
     flex-grow: 1;
-    text-align: center;
     padding: 20px;
     box-sizing: border-box;
 }
+div.content {text-align: center;}
 footer {
     position: sticky;
     bottom: 0;
@@ -66,7 +66,6 @@ a:active {color: crimson;}
     font-family: var(--font), sans-serif;
     font-size: var(--fontsize);
 }
-.content {text-align: center;}
 #container {
     display: flex;
     justify-content: space-between;
@@ -109,3 +108,4 @@ code {
   font-size: inherit;
   font-family: 'fixedsys_excelsior_3.01Rg';
 }
+.nav .link.active {color: crimson;}

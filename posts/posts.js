@@ -1,4 +1,4 @@
-fetch('posts.json')
+fetch('../posts/posts.json')
    .then(response => response.json())
    .then(data => {
       data.sort((a, b) => b.order - a.order);
