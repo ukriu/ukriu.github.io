@@ -10,6 +10,7 @@ function displayPosts(posts) {
    const container = document.getElementById('posts-container');
    if (!container) return;
    container.innerHTML = '';
+
    posts.forEach(post => {
       const textBoxClass = (post.author === 'ukrio' || post.author === 'ukrioo') ? 'text-box-owner' : 'text-box';
       const textBox = document.createElement('div');
@@ -21,6 +22,7 @@ function displayPosts(posts) {
       authorDiv.style.fontSize = '0.8em';
       authorDiv.style.display = 'flex';
       authorDiv.style.alignItems = 'center';
+
       if (post.author || post.author_pfp) {
          const authorLink = document.createElement('a');
          authorLink.href = post.author_link || '#';
@@ -44,6 +46,7 @@ function displayPosts(posts) {
          }
          authorDiv.appendChild(authorLink);
       }
+
       if (post.timestamp) {
          if (post.author || post.author_pfp) {
             const separator = document.createElement('span');
@@ -57,9 +60,11 @@ function displayPosts(posts) {
          timestamp.style.marginLeft = '0.5em';
          authorDiv.appendChild(timestamp);
       }
+
       if (authorDiv.hasChildNodes()) {
          article.appendChild(authorDiv);
       }
+
       if (post.title) {
          const title = document.createElement('h2');
          title.textContent = post.title;
@@ -68,18 +73,25 @@ function displayPosts(posts) {
          title.style.marginBottom = '0.4em';
          article.appendChild(title);
       }
+
       if (post.description) {
          const description = document.createElement('p');
          description.className = 'description';
-         description.innerHTML = post.description.replace(/\n/g, '<br>');
+         let formattedDescription = post.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+         formattedDescription = formattedDescription.replace(/\*(.*?)\*/g, '<em>$1</em>');
+         formattedDescription = formattedDescription.replace(/\`(.*?)\`/g, '<code>$1</code>');
+         formattedDescription = formattedDescription.replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2">$1</a>');
+         description.innerHTML = formattedDescription.replace(/\n/g, '<br>');
          article.appendChild(description);
       }
+
       if (post.thumbnail) {
          const thumbnail = document.createElement('img');
          thumbnail.src = post.thumbnail;
          thumbnail.alt = post.title || 'Thumbnail';
          article.appendChild(thumbnail);
       }
+
       textBox.appendChild(article);
       container.appendChild(textBox);
       container.appendChild(document.createElement('br'));

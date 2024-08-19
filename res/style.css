@@ -103,3 +103,9 @@ h2 {
   border: 1px solid violet;
   padding: 16px;
 }
+code {
+  background: grey;
+  text-color: crimson;
+  font-size: inherit;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+}

@@ -13,7 +13,7 @@
     "order": 2,
     "timestamp": "19th August, 2024",
     "title": "about the archives",
-    "description": "you can visit the archive page by <a href='https://ukrioo.github.io/archive'>clicking here.</a>\nthe archives contain all the recorded previous itterations of my site\ncurrently you can access <a href='https://ukrioo.github.io/archive/v3'>v3</a> and <a href='https://ukrioo.github.io/archive/v4'>v4</a>!\ni lost the other ones",
+    "description": "you can visit the archive page by [clicking here.](https://ukrioo.github.io/archive)\nthe archives contain all the recorded previous itterations of my site\ncurrently you can access [v3](https://ukrioo.github.io/archive/v3) and [v4](https://ukrioo.github.io/archive/v4)!\ni lost the other ones",
     "author": "ukrio",
     "author_pfp": "../res/media/pfp.webp",
     "author_link": "../contact"
@@ -23,7 +23,7 @@
     "timestamp": "19th August, 2024",
     "title": "Introducing myself",
     "description": "I'm SkyExploreWasTaken, a french gamer that is interested in web development.",
-    "author": "SkyExploreWasTaaken",
+    "author": "SkyExploreWasTaken",
     "author_pfp": "https://z.is-a.dev/hosted-content/images/System32Cat.png",
     "author_link": "https://sewt.is-a.dev"
   },
@@ -35,5 +35,14 @@
     "author": "CuteDog5695",
     "author_pfp": "https://avatars.githubusercontent.com/u/69630113?v=4",
     "author_link": "https://github.com/CuteDog5695"
+  },
+  {
+    "order": 5,
+    "timestamp": "19th August, 2024",
+    "title": "new text formatting!",
+    "description": "you can now type in **bold**, *italics*, `inline code` and [masked links](https://ukrio.is-a.dev/)!\nsimply follow the markdown formatting",
+    "author": "ukrio",
+    "author_pfp": "../res/media/pfp.webp",
+    "author_link": "../contact"
   }
 ]
