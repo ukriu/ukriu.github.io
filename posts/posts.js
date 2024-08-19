@@ -81,7 +81,7 @@ function displayPosts(posts) {
         if (post.description) {
             const description = document.createElement('p');
             description.className = 'description';
-            description.textContent = post.description;
+            description.innerHTML = post.description.replace(/\n/g, '<br>');
             article.appendChild(description);
         }
 

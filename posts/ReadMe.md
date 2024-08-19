@@ -25,6 +25,7 @@ Here's the basic structure for each post:
   }
 ]
 ```
+> Note: If you wanna add a linebreak in the description, just add `\n`. It will be replaced to a linebreak.
 
 ## 4) Commit & Push the changes
 You should know how to do this depending on where you're accessing the repository!
