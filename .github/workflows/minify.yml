@@ -39,8 +39,20 @@ jobs:
       run: |
         git checkout -B minified origin/main
 
-    - name: Minify HTML, CSS, JS, and JSON (Parallel)
-      run: pnpm run minify
+    - name: Minify HTML
+      run: pnpm run minify:html &
+
+    - name: Minify CSS
+      run: pnpm run minify:css &
+
+    - name: Minify JS
+      run: pnpm run minify:js &
+
+    - name: Minify JSON
+      run: pnpm run minify:json &
+
+    - name: Wait for all minification tasks to finish
+      run: wait
 
     - name: Commit and Push Minified Files to Minified Branch
       env:
@@ -48,6 +60,6 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add -u  # Only add updated files
+        git add -u
         git commit -m "Minified HTML, CSS, JS, and JSON"
         git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/ukrioo/ukrioo.github.io.git" minified
