@@ -96,6 +96,10 @@ h2 {
     font-weight: 100;
 }
 .text-box {
+  border: 1px solid;
+  padding: 16px;
+}
+.text-box-owner {
   border: 1px solid violet;
   padding: 16px;
 }
