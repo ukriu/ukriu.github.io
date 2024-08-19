@@ -26,7 +26,12 @@ Here's the basic structure for each post:
   }
 ]
 ```
-> Note: If you wanna add a linebreak in the description, just add `\n`. It will be replaced to a linebreak.
+* Here are the formatting options available for posts:<br>
+ - **Bold Text** (`strong`): `\*\*Bold Text\*\*<br>
+ - *Italic Text* (`<em>`): \*Italic Text\* <br> 
+ - `Inline Code Blocks` (`<code>`): \`text\`<br>
+ - [Masked Links](https://ukrioo.github.io/) (`<a href="">`): \[Masked Links\]\(url\)<br>
+
 
 ## 4) Commit & Push the changes
 You should know how to do this depending on where you're accessing the repository!
