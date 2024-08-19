@@ -1,0 +1,21 @@
+[
+  {
+    "order": 1,
+    "timestamp": "19th August, 2024",
+    "title": "First Post!",
+    "thumbnail": "https://raw.githubusercontent.com/ukrioo/archive/main/v4/resources/images/meta-img.webp",
+    "description": "Hello! This is the first ever post by me (ukrio)!\nThis is purely an example post so that I can work on displaying this.",
+    "author": "ukrio",
+    "author_pfp": "../res/media/pfp.webp",
+    "author_link": "../contact/"
+  },
+  {
+    "order": 2,
+    "timestamp": "19th August, 2024",
+    "title": "The second example post.",
+    "description": "Again, The second example post!\nYay",
+    "author": "ukrio",
+    "author_pfp": "../res/media/pfp.webp",
+    "author_link": "../contact"
+  }
+]

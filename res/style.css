@@ -51,7 +51,6 @@ img {
 hr {width: 100%;}
 @media screen and (max-width: 700px) {body, img {max-width: 90%;}}
 h1 {font-size: 32px; font-weight: 100;}
-h2 {font-weight: 100;}
 a, p {
     text-decoration: none;
     font-size: var(--fontsize);
@@ -74,3 +73,25 @@ a:active {color: crimson;}
     width: 100%;
 }
 #left, #right {width: auto;}
+.author {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+.author img {
+    width: 1.2em;
+    height: 1.2em;
+}
+.author a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.timestamp {
+    margin-left: 0.5em;
+}
+h2 {
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    font-weight: 100;
+}
