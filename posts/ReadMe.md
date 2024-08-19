@@ -1,7 +1,8 @@
 
 # How can I add my own posts?
 > Im not sure why you'd want to, but you can!
-Heres the step by step instructions on how to:
+
+Here are the step by step instructions on how to:
 
 ## 1) Fork the repository
 Click the big blue "Fork" button and fork the repository.
