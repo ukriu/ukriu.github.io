@@ -1,4 +1,3 @@
-
 # How can I add my own posts?
 > Im not sure why you'd want to, but you can!
 
@@ -31,7 +30,7 @@ Here are the formatting options available for posts:<br>
  - **Bold Text** (`<strong>`): \*\*Bold Text\*\*<br>
  - *Italic Text* (`<em>`): \*Italic Text\* <br> 
  - `Inline Code Blocks` (`<code>`): \`text\`<br>
- - [Masked Links](https://ukrioo.github.io/) (`<a href="">`): \[Masked Links\]\(url\)<br>
+ - [Masked Links](https://ukriu.github.io/) (`<a href="">`): \[Masked Links\]\(url\)<br>
 
 
 ## 4) Commit & Push the changes
