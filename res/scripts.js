@@ -6,6 +6,11 @@ function loadPage(pageUrl, linkId, scriptUrl = null) {
          const doc = parser.parseFromString(data, 'text/html');
          const mainContent = doc.querySelector('main').innerHTML;
          document.querySelector('main').innerHTML = mainContent;
+         const titleContent = doc.querySelector('title').innerHTML;
+         document.querySelector('title').innerHTML = titleContent;
+         const h1Content = doc.querySelector('header h1').outerHTML;
+         document.querySelector('header h1').outerHTML = h1Content;
+
          setActiveLink(linkId);
          if (scriptUrl) {
             loadScript(scriptUrl);
@@ -48,7 +53,7 @@ function checkQueryString() {
    } else if (query.includes('?socials')) {
       loadPage('../contact/index.html', 'socialsLink');
    } else if (query.includes('?posts')) {
-      loadPage('../posts/index.html', 'postsLink', '../posts/posts.js'); // Load post.js for the posts page
+      loadPage('../posts/index.html', 'postsLink', '../posts/posts.js');
    }
 }
 
@@ -66,7 +71,7 @@ document.getElementById('socialsLink').addEventListener('click', function (e) {
 });
 document.getElementById('postsLink').addEventListener('click', function (e) {
    e.preventDefault();
-   loadPage('../posts/index.html', 'postsLink', '../posts/posts.js'); // Load post.js for the posts page
+   loadPage('../posts/index.html', 'postsLink', '../posts/posts.js');
 });
 window.addEventListener('load', checkQueryString);
 
