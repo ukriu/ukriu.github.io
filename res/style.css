@@ -1,111 +1,121 @@
 @font-face {
-    font-family: 'fixedsys_excelsior_3.01Rg';
-    src: url('media/font.woff2') format('woff2'), url('media/font.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'fixedsys_excelsior_3.01Rg';
+  src: url('media/font.woff2') format('woff2'), url('media/font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 :root {
-    font-family: 'fixedsys_excelsior_3.01Rg';
-    color: lavenderblush;
-    --fontsize: 16px;
+  font-family: 'fixedsys_excelsior_3.01Rg', sans-serif;
+  --font: 'fixedsys_excelsior_3.01Rg', sans-serif;
+  font-size: 16px;
+  color: lavenderblush;
 }
-html, body {margin: 0;}
+
+html, body {
+  margin: 0 auto;
+  background: #000;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    max-width: 650px;
-    margin: 0 auto;
-    background: url(media/bg.gif), #000;
-    background-attachment: fixed;
-    image-rendering: pixelated;
-    background-repeat: repeat;
-    background-clip: initial;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 650px;
+  background: url(media/bg.gif) repeat center center, #000;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 header {
-    flex-shrink: 0;
-    width: 100%;
-    min-height: 50px;
-    z-index: 1000;
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 50px;
+  z-index: 1000;
 }
+
 main.content {
-    flex-grow: 1;
-    padding: 20px;
-    box-sizing: border-box;
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
 }
 div.content {text-align: center;}
+
 footer {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    background: inherit;
-    z-index: 1000;
-    flex-shrink: 0;
-    padding: 10px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: inherit;
+  z-index: 1000;
+  flex-shrink: 0;
+  padding: 10px 0;
 }
-img {
-    max-width: 100%;
-    image-rendering: pixelated;
+
+img {max-width: 100%;}
+@media screen and (max-width: 700px) {
+  body, img {
+    max-width: 90%;
+  }
 }
-hr {width: 100%;}
-@media screen and (max-width: 700px) {body, img {max-width: 90%;}}
-h1 {font-size: 32px; font-weight: 100;}
-a, p {
-    text-decoration: none;
-    font-size: var(--fontsize);
-    font-weight: 100;
+
+h1 {font-size: 2em;}
+h2 {
+  font-size: 1.5em;
+  margin-top: 0.2em;
 }
+
+code {
+  background: #342f36;
+  color: #888388;
+  font-size: inherit;
+  font-family: var(--font);
+}
+a, p {text-decoration: none;}
+
 a:link {color: violet;}
 a:visited {color: violet;}
 a:hover {color: lavenderblush;}
 a:active {color: crimson;}
 #playButton {color: violet;}
+
 .nav {
-    text-align: center;
-    font-family: var(--font), sans-serif;
-    font-size: var(--fontsize);
+  text-align: center;
+  font-family: var(--font);
 }
+.nav .link.active {color: crimson;}
+
 #container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 #left, #right {width: auto;}
+
 .author {
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
 }
 .author img {
-    width: 1.2em;
-    height: 1.2em;
+  width: 1.2em;
+  height: 1.2em;
 }
 .author a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 .timestamp {
-    margin-left: 0.5em;
+  margin-left: 0.5em;
 }
-h2 {
-    font-size: 1.5em;
-    margin-top: 0.2em;
-    font-weight: 100;
-}
+
 .text-box {
   border: 1px solid;
   padding: 16px;
 }
+
 .text-box-owner {
   border: 1px solid violet;
   padding: 16px;
 }
-code {
-  background: grey;
-  text-color: crimson;
-  font-size: inherit;
-  font-family: 'fixedsys_excelsior_3.01Rg';
-}
-.nav .link.active {color: crimson;}
