@@ -9,7 +9,7 @@
 :root {
   font-family: 'fixedsys_excelsior_3.01Rg', sans-serif;
   --font: 'fixedsys_excelsior_3.01Rg', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: lavenderblush;
 }
 
@@ -59,10 +59,11 @@ img {max-width: 100%;}
   }
 }
 
-h1 {font-size: 2em;}
+h1 {font-size: 2rem;}
 h2 {
-  font-size: 1.5em;
-  margin-top: 0.2em;
+  font-size: 1.8rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
 }
 
 code {
@@ -93,13 +94,13 @@ a:active {color: crimson;}
 #left, #right {width: auto;}
 
 .author {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
 }
 .author img {
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 .author a {
   display: flex;
@@ -107,7 +108,7 @@ a:active {color: crimson;}
   text-decoration: none;
 }
 .timestamp {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 
 .text-box {
