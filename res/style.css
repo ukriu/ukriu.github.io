@@ -67,8 +67,8 @@ h2 {
 }
 
 code {
-  background: #342f36;
-  color: #BEBEBE, #888388;
+  background: #302C30, #342f36;
+  color: #BEBCBE, #888388;
   font-size: inherit;
   font-family: var(--font);
 }
