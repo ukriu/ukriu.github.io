@@ -16,9 +16,9 @@
 html, body {
   margin: 0 auto;
   background: #000;
+  background: url(media/bg.gif) repeat center center, #000;
   background-attachment: fixed;
   background-size: cover;
-  background: url(media/bg.gif) repeat center center, #000;
 }
 
 body {
