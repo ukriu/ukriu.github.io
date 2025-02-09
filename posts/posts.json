@@ -76,7 +76,7 @@
     "order": 9,
     "timestamp": "29th January, 2025",
     "title": "blue: I won't click it",
-    "description": "ukriu: any reason...? blue: it's.a secret",
+    "description": "ukriu: any reason...? blue: it's a secret",
     "author": "unknown",
     "author_pfp": "https://avatars.githubusercontent.com/u/719182?v=4",
     "author_link": "https://github.com/ante0"
@@ -84,10 +84,10 @@
   {
     "order": 10,
     "timestamp": "8th February, 2025",
-    "title":"Please send your feet pics",
-    "description":"I need your feet pics, send them on my tg account: @TheSillyOk",
-    "author":"Ok",
-    "author_pfp":"https://i.pinimg.com/736x/92/c7/c7/92c7c7037c50d9c1915d141c7fd5d4e7.jpg",
-    "author_link":"https://github.com/TheSillyOk",
-   }
+    "title": "Please send your feet pics",
+    "description": "I need your feet pics, send them on my tg account: @TheSillyOk",
+    "author": "Ok",
+    "author_pfp": "https://i.pinimg.com/736x/92/c7/c7/92c7c7037c50d9c1915d141c7fd5d4e7.jpg",
+    "author_link": "https://github.com/TheSillyOk"
+  }
 ]
