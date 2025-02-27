@@ -81,7 +81,7 @@ function togglePlayPause() {
 
    if (audio.paused) {
       audio.play();
-      playButton.style.color = "crimson";
+      playButton.style.color = "#a190a3";
    } else {
       audio.pause();
       playButton.style.color = "lavenderblush";

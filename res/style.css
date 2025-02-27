@@ -74,17 +74,17 @@ code {
 }
 a, p {text-decoration: none;}
 
-a:link {color: violet;}
-a:visited {color: violet;}
+a:link {color: #bc3248;}
+a:visited {color: #bc3248;}
 a:hover {color: lavenderblush;}
-a:active {color: crimson;}
-#playButton {color: violet;}
+a:active {color: #a190a3;}
+#playButton {color: #bc3248;}
 
 .nav {
   text-align: center;
   font-family: var(--font);
 }
-.nav .link.active {color: crimson;}
+.nav .link.active {color: #a190a3;}
 
 #container {
   display: flex;
@@ -117,6 +117,6 @@ a:active {color: crimson;}
 }
 
 .text-box-owner {
-  border: 1px solid violet;
+  border: 1px solid #bc3248;
   padding: 16px;
 }
