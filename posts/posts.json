@@ -98,5 +98,15 @@
     "author": "Microsoft Word",
     "author_pfp": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg",
     "author_link": "https://github.com/ahakkoca07"
+  },
+  {
+    "order": 12,
+    "timestamp": "8th March, 2024",
+    "title": "fumo fumo",
+    "thumbnail": "https://pbs.twimg.com/media/GhpQU_kbUAESy-T?format=jpg&name=4096x4096",
+    "description": "i am literally fumo",
+    "author": "orangc",
+    "author_pfp": "https://orangc.net/assets/cirno.png",
+    "author_link": "https://orangc.net"
   }
 ]
