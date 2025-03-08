@@ -108,5 +108,15 @@
     "author": "orangc",
     "author_pfp": "https://orangc.net/assets/cirno.png",
     "author_link": "https://orangc.net"
-  }
+  },
+  {
+    "order": 13,
+    "timestamp": "8th March, 2024",
+    "title": "meow",
+    "thumbnail": "https://c.tenor.com/e7tlVQNJ29gAAAAd/tenor.gif",
+    "description": "i am a cat nerd",
+    "author": "omardotdev",
+    "author_pfp": "https://github.com/omardotdev.png",
+    "author_link": "https://omardotdev.is-a.dev"
+  },
 ]
