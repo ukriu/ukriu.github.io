@@ -1,10 +1,13 @@
-fetch('../posts/posts.json')
-    .then(response => response.json())
-    .then(data => {
+async function fetchPosts() {
+    try {
+        const response = await fetch('../posts/posts.json');
+        const data = await response.json();
         data.sort((a, b) => b.order - a.order);
         displayPosts(data);
-    })
-    .catch(error => console.error('Error fetching posts:', error));
+    } catch (error) {
+        console.error('Error fetching posts:', error);
+    }
+}
 
 function displayPosts(posts) {
     const container = document.getElementById('posts-container');
@@ -12,7 +15,7 @@ function displayPosts(posts) {
     container.innerHTML = '';
 
     posts.forEach(post => {
-        const textBoxClass = (post.author === 'ukrio' || post.author === 'ukrioo') ? 'text-box-owner' : 'text-box';
+        const textBoxClass = (post.author === 'ukriu' || post.author === 'ukriuu' || post.author === 'ukrio' || post.author === 'ukrioo') ? 'text-box-owner' : 'text-box';
         const textBox = document.createElement('div');
         textBox.className = textBoxClass;
 
@@ -39,13 +42,14 @@ function displayPosts(posts) {
                 authorPfp.alt = post.author || 'Profile picture';
                 authorPfp.style.width = '1.2em';
                 authorPfp.style.height = '1.2em';
+                authorPfp.style.marginRight = '0.5em';
+                authorPfp.loading = 'lazy';
                 authorLink.appendChild(authorPfp);
             }
 
             if (post.author) {
                 const authorName = document.createElement('span');
                 authorName.textContent = post.author;
-                authorName.style.marginLeft = '0.5em';
                 authorLink.appendChild(authorName);
             }
 
@@ -74,22 +78,21 @@ function displayPosts(posts) {
         if (post.title) {
             const title = document.createElement('h2');
             title.textContent = post.title;
-            title.style.fontSize = '1.8em';
-            title.style.marginTop = '0.2em';
-            title.style.marginBottom = '0.4em';
             article.appendChild(title);
         }
 
         if (post.description) {
             const description = document.createElement('p');
             description.className = 'description';
+            description.style.marginTop = '0.3em';
+            description.style.marginBottom = '0.1em';
 
             let formattedDescription = post.description
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  // Bold
-                .replace(/\*(.*?)\*/g, '<em>$1</em>')  // Italic
-                .replace(/\`(.*?)\`/g, '<code>$1</code>')  // Code
-                .replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2">$1</a>')  // Masked links
-                .replace(/\n/g, '<br>');  // Line breaks
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold
+                .replace(/\*(.*?)\*/g, '<em>$1</em>') // Italic
+                .replace(/\`(.*?)\`/g, '<code>$1</code>') // Code
+                .replace(/\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g, '<a href="$2">$1</a>') // Masked links
+                .replace(/\n/g, '<br>'); // Line breaks
 
             description.innerHTML = formattedDescription;
             article.appendChild(description);
@@ -99,17 +102,19 @@ function displayPosts(posts) {
             const thumbnail = document.createElement('img');
             thumbnail.src = post.thumbnail;
             thumbnail.alt = post.title || 'Thumbnail';
+            thumbnail.loading = 'lazy';
+            thumbnail.style.maxWidth = '100%';
             article.appendChild(thumbnail);
         }
 
         const postNumber = document.createElement('span');
         postNumber.textContent = `Post Number: ${post.order}`;
-        postNumber.style.marginTop = '0.5em';
         postNumber.style.fontStyle = 'italic';
         article.appendChild(postNumber);
-
         textBox.appendChild(article);
         container.appendChild(textBox);
         container.appendChild(document.createElement('br'));
     });
 }
+
+fetchPosts();
