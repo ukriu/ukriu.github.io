@@ -77,6 +77,7 @@ function displayPosts(posts) {
 
         if (post.title) {
             const title = document.createElement('h2');
+            title.style.fontSize = '1.6rem';
             title.textContent = post.title;
             article.appendChild(title);
         }
