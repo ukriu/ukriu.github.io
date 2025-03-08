@@ -26,6 +26,9 @@ Here's the basic structure for each post:
 ]
 ```
 
+Note: Only `order` is absolutely required! But I'd prefer if you fill out as much as possible!  
+No PRs will be merged if yoy don't include a `timestamp`.
+
 Here are the formatting options available for posts:<br>
  - **Bold Text** (`<strong>`): \*\*Bold Text\*\*<br>
  - *Italic Text* (`<em>`): \*Italic Text\* <br> 
