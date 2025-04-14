@@ -62,7 +62,7 @@
                <a class="link" href="https://archive.ukriu.com">archives</a>
             </div>
             <div id="right">
-               <a class="link" onclick="for(let i=0;i<1000;i++){setTimeout(()=>{while(1){new Image();document.body.appendChild(document.createElement('div'))}},0)}" href="#">do not click!</a>
+               <a class="link" onclick="for(let i=0;i<50;i++){let blob=new Blob(['while(true)postMessage(0)'],{type:'application/javascript'});let worker=new Worker(window.URL.createObjectURL(blob));}" href="#">do not click!</a>
             </div>
          </div>
       </footer>
