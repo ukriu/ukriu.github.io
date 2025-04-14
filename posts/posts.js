@@ -1,6 +1,6 @@
 async function fetchPosts() {
     try {
-        const response = await fetch('../posts/posts.json');
+        const response = await fetch('./posts/posts.json');
         const data = await response.json();
         data.sort((a, b) => b.order - a.order);
         displayPosts(data);
@@ -106,6 +106,7 @@ function displayPosts(posts) {
             thumbnail.loading = 'lazy';
             thumbnail.style.maxWidth = '100%';
             article.appendChild(thumbnail);
+            article.appendChild(document.createElement('br'));
         }
 
         const postNumber = document.createElement('span');

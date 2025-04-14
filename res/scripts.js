@@ -49,29 +49,29 @@ function setActiveLink(activeLinkId) {
 function checkQueryString() {
    const query = window.location.search;
    if (query.includes('?about')) {
-      loadPage('../about/index.html', 'aboutLink');
+      loadPage('./about/index.html', 'aboutLink');
    } else if (query.includes('?socials')) {
-      loadPage('../contact/index.html', 'socialsLink');
+      loadPage('./contact/index.html', 'socialsLink');
    } else if (query.includes('?posts')) {
-      loadPage('../posts/index.html', 'postsLink', '../posts/posts.js');
+      loadPage('./posts/index.html', 'postsLink', './posts/posts.js');
    }
 }
 
 document.getElementById('homeLink').addEventListener('click', function (e) {
    e.preventDefault();
-   loadPage('../index.html', 'homeLink');
+   loadPage('./index.html', 'homeLink');
 });
 document.getElementById('aboutLink').addEventListener('click', function (e) {
    e.preventDefault();
-   loadPage('../about/index.html', 'aboutLink');
+   loadPage('./about/index.html', 'aboutLink');
 });
 document.getElementById('socialsLink').addEventListener('click', function (e) {
    e.preventDefault();
-   loadPage('../contact/index.html', 'socialsLink');
+   loadPage('./contact/index.html', 'socialsLink');
 });
 document.getElementById('postsLink').addEventListener('click', function (e) {
    e.preventDefault();
-   loadPage('../posts/index.html', 'postsLink', '../posts/posts.js');
+   loadPage('./posts/index.html', 'postsLink', './posts/posts.js');
 });
 window.addEventListener('load', checkQueryString);
 
