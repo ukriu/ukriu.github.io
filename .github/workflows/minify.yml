@@ -2,8 +2,7 @@ name: Sync, Minify and Push to Minified Branch
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 jobs:
   sync-minify:
@@ -14,23 +13,13 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '*'
 
-    - name: Install pnpm globally
-      run: npm install -g pnpm
-
-    - name: Cache pnpm store
-      uses: actions/cache@v3
-      with:
-        path: ~/.pnpm-store
-        key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-        restore-keys: |
-          ${{ runner.os }}-pnpm-
-
-    - name: Install dependencies
-      run: pnpm install
+    - name: Install Minification Tools
+      run: |
+        npm install -g html-minifier-terser clean-css-cli terser json-minify
 
     - name: Fetch all branches
       run: git fetch --all
@@ -40,17 +29,21 @@ jobs:
         git checkout -B minified origin/main
 
     - name: Minify HTML
-      run: pnpm run minify:html &
-
+      run: |
+        find . -name '*.html' -exec html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \; &
+    
     - name: Minify CSS
-      run: pnpm run minify:css &
-
+      run: |
+        find . -name '*.css' -exec cleancss -o {} {} \; &
+    
     - name: Minify JS
-      run: pnpm run minify:js &
-
+      run: |
+        find . -name '*.js' -exec terser --compress --mangle --output {} -- {} \; &
+    
     - name: Minify JSON
-      run: pnpm run minify:json &
-
+      run: |
+        find . -name '*.json' -exec sh -c 'json-minify < "$1" > "$1.tmp" && mv "$1.tmp" "$1"' _ {} \; &
+    
     - name: Wait for all minification tasks to finish
       run: wait
 
@@ -61,5 +54,5 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git add -u
-        git commit -m "Minified HTML, CSS, JS, and JSON"
+        git commit -m "Minified HTML, CSS, JS, and JSON" || echo "Nothing to commit"
         git push --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" minified
