@@ -159,10 +159,9 @@
     "order": 17,
     "timestamp": "The 16th of November, 2025",
     "title": "Genshin Impact",
-    "description": "Look my name up on Google if you play Genshin Impact",
+    "description": "Look my name up on Google if you play Genshin Impact<br><br><p style='font-size: 8px'>this is a joke</p>",
     "author": "ameno_minmax",
     "author_pfp": "https://upload-os-bbs.hoyolab.com/upload/2021/08/10/138438539/40c5a10254163247c9950d82d3771c84_3264641510281282200.jpg",
-    "author_link": "https://google.com/search?q=ameno+minmax",
-    "warning": "I'm not actually ameno_minmax, this is just a joke"
+    "author_link": "https://google.com/search?q=ameno+minmax"
   }
 ]
