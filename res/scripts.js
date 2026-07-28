@@ -91,3 +91,6 @@ function togglePlayPause() {
 document.getElementById("audioPlayer").addEventListener("ended", function () {
    document.getElementById("playButton").style.color = "rgb(255, 0, 255)";
 });
+
+const dice = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+document.getElementById("randomDice").textContent = dice[Math.floor(Math.random() * dice.length)];
