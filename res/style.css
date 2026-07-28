@@ -89,12 +89,18 @@ a:active {color: var(--active-color);;}
 }
 .nav .link.active {color: var(--active-color);;}
 
+#containRing {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: -1rem;
+}
 #container {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-#left, #right {width: auto;}
+#left, #middle, #right {width: auto;}
 
 .author {
   font-size: 0.8rem;
